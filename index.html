@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+    <title>Lebenslauf</title>
+   
+</head>
+<body>
+    <header>
+        Lebenslauf vom Mustafa Jasim | Heute ist: <span id="current-time"></span>
+    </header>
+	  <div class="foto">
+        <img src="foto.jpg" alt="Profilfoto">
+    </div>
+    <main>
+        <h1>Mustafa Jasim</h1>
+        <p><strong>Adresse:</strong> Helene-Mayer-Ring 10, 80809 München</p>
+		<p><strong>Geburtsdatum:</strong> 05.07.1965</p>
+		<p><strong>Nationalität:</strong> Deutsch</p>
+        <p><strong>E-Mail:</strong> mjasim@t-online.de</p>
+        <p><strong>Telefon:</strong> +4917671222316</p>
+		<section>
+            <h2>Berufserfahrung</h2>
+			<p><span class="date">Okt-2022 - Merz-2023:</span> Netzbetreuer, Bundeswehr Stetten a.k. Markt.</p>
+            <p><span class="date">Sep-2021 - Sep-2022:</span> APL Planer, Circet, Deutschland Rendsburger Str. 34, 30659 Hannover, Home Office.</p>
+			<p><span class="date">Apr-2021 - Mai-2021:</span> FTTH Planer, VTG Haar.</p>
+			<p><span class="date">Jan-2017 - Nov-2019:</span> System Planer, Deutsche Telekom München.</p>
+            <p><span class="date">Feb-2015 - Dez-2016:</span> Rollout Planer, Vivento München.</p>
+			<p><span class="date">Nov-2011 - Merz-2012:</span> Servicetechniker, Cableway Süd München.</p>
+			<p><span class="date">Jun-2012 - Aug-2012:</span> Rollout Techniker HP München.</p>
+        </section>
+        <section>
+            <h2>Bildung</h2>
+            <p><span class="date">Jan-2024 - Jan-2026:</span> Fachinformatiker /in für Systemintegration München.</p>
+			<p><span class="date">Juli-1997- Juli-1999:</span> Kommunikationselektroniker München.</p>
+            <p><span class="date">1981 - 1985:</span> Abitur, Alrusafa Gymnasium Baghdad.</p>
+        </section>
+		<section>
+            <h2>Weiterbildung</h2>
+			<p><span class="date">Feb-2020 - Dez-2020:</span> Web Developer: Java, JavaScript, html, PHP1 und PHP2.</p>
+            <p><span class="date">Jun-2013 - Apr-2014:</span> Oracle OCA, OCP: MySQL, SQL Experter.</p>
+			<p><span class="date">Dez-1999- Mai-2001:</span> Virtuelles Studium Microsoft, MCSE Abschluss.</p>
+        </section>
+		<div class="download">
+            <a href="Lebenslauf.pdf" download="Lebenslauf.pdf">Lebenslauf herunterladen</a>
+        </div>
+       </main>
+	  <footer>
+        &copy; 2024 Mustafa Jasim. Alle Rechte vorbehalten. | <a href="Mustafa Jasim Private Webseite">Impressum</a> | <p>Telefon: <a href="tel:+49 17671222316">+49 17671222316</a></p>
+  <p>Email: <a href="mailto:mjasim@t-online.de">mjasim@t-online.de</a></p>
+    </footer>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById('current-time').textContent = now.toLocaleDateString('de-DE', options);
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
