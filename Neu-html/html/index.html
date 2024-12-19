@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lebenslauf</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: skyblue;
+            color: #333;
+        }
+        header {
+            background: blue;
+            color: #fff;
+            padding: 10px 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header span {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+		    .foto {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+			padding 0;
+        }
+		.foto img {
+            width: 150px;
+            height: 150px;
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #444;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .date {
+            font-weight: bold;
+        }
+        footer {
+            background: blue;
+            color: #fff;
+            text-align: center;
+            padding: 10px 15px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Lebenslauf vom Mustafa Jasim| <span id="current-time"></span>
+    </header>
+	  <div class="foto">
+        <img src="foto.jpg" alt="Profilfoto">
+    </div>
+    <main>
+        <h1>Mustafa Jasim</h1>
+        <p><strong>Adresse:</strong> Helene-Mayer-Ring 10, 80809 München</p>
+		<p><strong>Geburtsdatum:</strong> 05.07.1970</p>
+        <p><strong>E-Mail:</strong> mjasim@t-online.de</p>
+        <p><strong>Telefon:</strong> +017671222316</p>
+		<section>
+            <h2>Berufserfahrung</h2>
+            <p><span class="date">Sep-2021 - Sep-2022:</span> APL Planer, Circet, Deutschland Rendsburger Str. 34, 30659 Hannover</p>
+			<p><span class="date">2016 - 2020:</span> IT-Techniker, Beispiel GmbH</p>
+            <p><span class="date">2016 - 2020:</span> IT-Techniker, Beispiel GmbH</p>
+        </section>
+        <section>
+            <h2>Bildung</h2>
+            <p><span class="date">Jan-2024 - Jan-2026:</span> Fachinformatiker</p>
+			<p><span class="date">Juli-1997- Juli-1999:</span> Kommunikationselektroniker</p>
+            <p><span class="date">1981 - 1985:</span> Abitur, Musterstadt Gymnasium</p>
+        </section>
+		 <section>
+            <h2>Weiterbildung</h2>
+            <p><span class="date">June-2013 - Apil-2014:</span> Fachinformatiker</p>
+			<p><span class="date">Juli-1997- Juli-1999:</span> Kommunikationselektroniker</p>
+            <p><span class="date">1981 - 1985:</span> Abitur, Musterstadt Gymnasium</p>
+        </section>
+		
+		<div class="download">
+            <a href="Lebenslauf.pdf" download="Lebenslauf.pdf">Lebenslauf herunterladen</a>
+        </div>
+       </main>
+	 </div>
+        </section>
+        
+    <footer>
+        &copy; 2024 Mustafa Jasim. Alle Rechte vorbehalten. | <a href="#">Impressum</a>
+    </footer>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById('current-time').textContent = now.toLocaleDateString('de-DE', options);
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
