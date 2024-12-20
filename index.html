@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        Lebenslauf vom Mustafa Jasim | Heute ist: <span id="current-time"></span>
+        Lebenslauf vom Mustafa Jasim | <span id="zeit-container"></span>
     </header>
 	  <div class="foto">
         <img src="foto.jpg" alt="Profilfoto">
@@ -52,13 +52,23 @@
   <p>Email: <a href="mailto:mjasim@t-online.de">mjasim@t-online.de</a></p>
     </footer>
     <script>
-        function updateTime() {
-            const now = new Date();
-            const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            document.getElementById('current-time').textContent = now.toLocaleDateString('de-DE', options);
+       function aktualisiereZeit() {
+            const wochentage = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
+            const monate = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+            const jetzt = new Date();
+            const wochentag = wochentage[jetzt.getDay()];
+            const monat = monate[jetzt.getMonth()];
+            const datum = jetzt.getDate();
+            const jahr = jetzt.getFullYear();
+            const stunden = jetzt.getHours().toString().padStart(2, '0');
+            const minuten = jetzt.getMinutes().toString().padStart(2, '0');
+            const sekunden = jetzt.getSeconds().toString().padStart(2, '0');
+
+            document.getElementById("zeit-container").textContent = `${wochentag}, ${datum}. ${monat} ${jahr} - ${stunden}:${minuten}:${sekunden}`;
         }
-        setInterval(updateTime, 1000);
-        updateTime();
+
+        setInterval(aktualisiereZeit, 1000);
+        aktualisiereZeit(); // Initialer Aufruf, um sofort die Zeit anzuzeigen
     </script>
 </body>
 </html>
