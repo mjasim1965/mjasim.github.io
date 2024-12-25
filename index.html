@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        Lebenslauf vom Mustafa Jasim | <span id="zeit-container"></span>
+        Lebenslauf vom Mustafa Jasim | Heute ist: <span id="current-time"></span>
     </header>
 	  <div class="foto">
         <img src="foto.jpg" alt="Profilfoto">
@@ -24,7 +24,7 @@
 		<section>
             <h2>Berufserfahrung</h2>
 			<p><span class="date">Okt-2022 - Merz-2023:</span> Netzbetreuer, Bundeswehr Stetten a.k. Markt.</p>
-            <p><span class="date">Sep-2021 - Sep-2022:</span> APL Planer, Circet, Deutschland Rendsburger Str. 34, 30659 Hannover, Home Office.</p>
+            <p><span class="date">Sep-2021 - Sep-2022:</span> APL Planer, Circet Deutschland, Hannover, Home Office.</p>
 			<p><span class="date">Apr-2021 - Mai-2021:</span> FTTH Planer, VTG Haar.</p>
 			<p><span class="date">Jan-2017 - Nov-2019:</span> System Planer, Deutsche Telekom München.</p>
             <p><span class="date">Feb-2015 - Dez-2016:</span> Rollout Planer, Vivento München.</p>
@@ -45,6 +45,7 @@
         </section>
 		<div class="download">
             <a href="Lebenslauf.pdf" download="Lebenslauf.pdf">Lebenslauf herunterladen</a>
+			<a href="anschreiben.de" download="anschreiben.pdf">anschreiben herunterladen</a>
         </div>
        </main>
 	  <footer>
@@ -52,23 +53,13 @@
   <p>Email: <a href="mailto:mjasim@t-online.de">mjasim@t-online.de</a></p>
     </footer>
     <script>
-       function aktualisiereZeit() {
-            const wochentage = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
-            const monate = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
-            const jetzt = new Date();
-            const wochentag = wochentage[jetzt.getDay()];
-            const monat = monate[jetzt.getMonth()];
-            const datum = jetzt.getDate();
-            const jahr = jetzt.getFullYear();
-            const stunden = jetzt.getHours().toString().padStart(2, '0');
-            const minuten = jetzt.getMinutes().toString().padStart(2, '0');
-            const sekunden = jetzt.getSeconds().toString().padStart(2, '0');
-
-            document.getElementById("zeit-container").textContent = `${wochentag}, ${datum}. ${monat} ${jahr} - ${stunden}:${minuten}:${sekunden}`;
+        function updateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById('current-time').textContent = now.toLocaleDateString('de-DE', options);
         }
-
-        setInterval(aktualisiereZeit, 1000);
-        aktualisiereZeit(); // Initialer Aufruf, um sofort die Zeit anzuzeigen
+        setInterval(updateTime, 1000);
+        updateTime();
     </script>
 </body>
 </html>
