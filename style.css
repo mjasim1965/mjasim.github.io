@@ -9,6 +9,7 @@
             color: #333;
 			
         }
+		
         header {
             background: #a8a8a8;
             color: #fff;
@@ -40,7 +41,7 @@
             max-width: 50%;
 			left: 0;
             margin: 20px auto;
-            background: #f0ffff;
+            background: #fcfcfc;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -69,5 +70,19 @@
             color: #ccc;
             text-decoration: none;
         }
+		 @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      body {
+        margin: 10px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 12px;
+      }
         
     </style>
