@@ -10,7 +10,7 @@
 			
         }
         header {
-            background: #104e8b;
+            background: #a8a8a8;
             color: #fff;
             padding: 10px 15px;
             text-align: center;
@@ -53,11 +53,11 @@
             margin-bottom: 20px;
         }
         .date {
-            font-weight: bold;
+            font-weight: 900;
 
         }
         footer {
-            background: #104e8b;
+            background: #a8a8a8;
             color: #fff;
             text-align: center;
             padding: 10px 15px;
